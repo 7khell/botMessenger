@@ -2,10 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 
+
+const OpenAI_ACCESS_TOKEN = process.env.API_KEY_OPENAI;
+
 const OpenAI = require("openai");
 //conexion con OpenAi
 const openai = new OpenAI({
-  apiKey: "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"
+  apiKey: OpenAI_ACCESS_TOKEN
 });
 
 

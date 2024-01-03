@@ -5,7 +5,7 @@ const request = require('request');
 const OpenAI = require("openai");
 //conexion con OpenAi
 const openai = new OpenAI({
-  apiKey: "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"
+  apiKey: "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"
 });
 
 

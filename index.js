@@ -4,6 +4,7 @@ const request = require('request');
 
 
 const OpenAI_ACCESS_TOKEN = process.env.API_KEY_OPENAI;
+const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 
 const OpenAI = require("openai");
 //conexion con OpenAi
@@ -15,8 +16,6 @@ const openai = new OpenAI({
 
 
 const app = express().use(bodyParser.json());
-//token de api de messenger
-const PAGE_ACCESS_TOKEN = 'EAAExju54ngQBO0qlbzXjDpWDZAro9UwGImLNWDLVFObBiQJD48IX2fqMDvnK6XX0kvgd4pMxRGq8TVvcNIQ4mAIcpLMXz6cDGEAzj8MA1xreWI8lo2KsgOrgkEr29AHMZCHiKYOzK76KF47ZCUWk8fnm2o9QxR1RLWzAZCh0TI7ng0paYs0S2JxgnvG8CikB';
 
 //Purta de coneccion con la Api de Facebook
 app.post('/webhook', (req, res) =>{
